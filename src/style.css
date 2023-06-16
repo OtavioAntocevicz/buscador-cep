@@ -1,0 +1,111 @@
+/*colocar sombra nas letra
+fon: 3px 8px 10px rgba(0, 0, 0, 0.7);*/
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../public/mapa3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.title{
+    font-size: 85px;
+    color: #000;
+    animation: flipTitle 4s;
+}
+
+
+@keyframes flipTitle {
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
+
+.containerInput{
+    background-color: #808080;
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.7);
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    margin-right: 8px;
+}
+
+.containerInput input::placeholder{
+    color: #f1f1f1;
+}
+
+.buttonSearch{
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSearch:hover{
+    transform: scale(1.2);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#808080;
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.7);
+    color: #fff;
+
+}
+
+.main h2{
+    font-family: sans-serif;
+    margin: 16px 0;
+    font-size: 38px;
+}
+
+.main span{
+    font-family: sans-serif;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 715px){
+    .title{
+        font-size: 60px;
+    }
+
+    .main h2{
+        font-size: 28px;
+    }
+
+    .main{
+        width: 80%;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 520px){
+    .title{
+        font-size: 50px;
+    }
+}
